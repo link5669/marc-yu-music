@@ -41,15 +41,15 @@ function Music() {
               </i>
             </p>
             <Col style={{ padding: "3%" }}>
-              <Album img={shp} file={shpAudio} title="Shpilkes" description="Short Film / Psychological Thriller" />
+              <Album id="shp" img={shp} file={shpAudio} title="Shpilkes" description="Short Film / Psychological Thriller" />
               <Album img={bard2} title="A Bard’s Tale: The Plane of Elemental Chaos Vol. 1" description="Library Music / Contemporary" />
             </Col>
             <Col style={{ padding: "3%" }}>
-              <Album img={bard1} file={bardAudio} title="A Bard’s Tale: Norse Vol. 1" description="Library Music / Norse, Folk, Metal" />
+              <Album id="bard1" img={bard1} file={bardAudio} title="A Bard’s Tale: Norse Vol. 1" description="Library Music / Norse, Folk, Metal" />
               <Album img={missingTwin} title="Missing Twin" description="Feature Film / Drama, Thriller" />
             </Col>
             <Col style={{ padding: "3%" }}>
-              <Album img={stalling} file={stallingAudio} title="Stalling" description="Short Film / Musical Comedy" />
+              <Album id="stalling" img={stalling} file={stallingAudio} title="Stalling" description="Short Film / Musical Comedy" />
               <Album img={alistair} title="Alistair" description="Video Game / Horror, Electronic" />
             </Col>
           </Row>

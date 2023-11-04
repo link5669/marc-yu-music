@@ -10,8 +10,8 @@ const Album = (props) => {
       />
       {props.file ? (
         <div style={{paddingBottom: "5%"}}>
-        <ReactAudioPlayer
-          style={{ width: "100%" }}
+        <ReactAudioPlayer id={props.id}
+          style={{ width: "100%", container: "square" }}
           src={props.file}
           autoPlay
           controls

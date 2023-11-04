@@ -5,14 +5,14 @@ import Col from "react-bootstrap/Col";
 import MarcNavbar from "./components/Navbar";
 import Quote from "./components/Quote";
 import MarcFooter from "./components/Footer";
+import RandomList from "./components/RandomList";
 
 function App() {
   return (
     <>
       <div style={{ width: "100vw", background: "black" }}>
         <MarcNavbar />
-        <br />
-        <br />
+        <RandomList/>
         <Container>
           <Row>
             <Col>
@@ -101,9 +101,9 @@ function App() {
           <br />
           <br />
           <br />
-        <br />
+          <br />
         </Container>
-        
+
         <MarcFooter />
         <br />
         <br />
