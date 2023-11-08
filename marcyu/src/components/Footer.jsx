@@ -40,7 +40,7 @@ const MarcFooter = () => {
               width="16"
               height="16"
               fill="currentColor"
-              class="bi bi-twitter"
+              className="bi bi-twitter"
               viewBox="0 0 16 16"
               style={{ color: "white" }}
             >
@@ -55,7 +55,7 @@ const MarcFooter = () => {
               width="16"
               height="16"
               fill="currentColor"
-              class="bi bi-facebook"
+              className="bi bi-facebook"
               viewBox="0 0 16 16"
               style={{ color: "white" }}
             >
@@ -70,7 +70,7 @@ const MarcFooter = () => {
               width="16"
               height="16"
               fill="currentColor"
-              class="bi bi-threads"
+              className="bi bi-threads"
               viewBox="0 0 16 16"
               style={{ color: "white" }}
             >
@@ -85,7 +85,7 @@ const MarcFooter = () => {
               width="16"
               height="16"
               fill="currentColor"
-              class="bi bi-envelope"
+              className="bi bi-envelope"
               viewBox="0 0 16 16"
               style={{ color: "white" }}
             >

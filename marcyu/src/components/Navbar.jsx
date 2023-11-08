@@ -24,7 +24,7 @@ const MarcNavbar = () => {
     >
       <Container>
         <Navbar.Brand
-          class="font"
+          className="font"
           style={{
             fontSize: "2rem",
             padding: "1%",
@@ -49,7 +49,7 @@ const MarcNavbar = () => {
                 <p className={currentPage === "/" ? "underline" : ""}>Home</p>
               </Link>
             </Nav.Link>
-            <Nav.Link class="nav-font" eventKey={2}>
+            <Nav.Link className="nav-font" eventKey={2}>
               <Link
                 style={{
                   fontFamily: "Georgia",
@@ -58,17 +58,12 @@ const MarcNavbar = () => {
                 }}
                 to="/about"
               >
-                <p className={currentPage === "/about" ? "underline" : ""}>About</p>
+                <p className={currentPage === "/about" ? "underline" : ""}>
+                  About
+                </p>
               </Link>
             </Nav.Link>
-            <Nav.Link
-              style={{
-                fontFamily: "Georgia",
-                color: "white",
-                textDecoration: "none",
-              }}
-              eventKey={2}
-            >
+            <Nav.Link eventKey={2}>
               <Link
                 style={{
                   fontFamily: "Georgia",
@@ -77,17 +72,12 @@ const MarcNavbar = () => {
                 }}
                 to="/music"
               >
-                <p className={currentPage === "/music" ? "underline" : ""}>Music</p>
+                <p className={currentPage === "/music" ? "underline" : ""}>
+                  Music
+                </p>
               </Link>
             </Nav.Link>
-            <Nav.Link
-              style={{
-                fontFamily: "Georgia",
-                color: "white",
-                textDecoration: "none",
-              }}
-              eventKey={2}
-            >
+            <Nav.Link eventKey={2}>
               <Link
                 style={{
                   fontFamily: "Georgia",
@@ -96,18 +86,12 @@ const MarcNavbar = () => {
                 }}
                 to="/credits"
               >
-                <p className={currentPage === "/credits" ? "underline" : ""}>Credits & Awards</p>
+                <p className={currentPage === "/credits" ? "underline" : ""}>
+                  Credits & Awards
+                </p>
               </Link>
             </Nav.Link>
-            <Nav.Link
-              style={{
-                fontFamily: "Georgia",
-                color: "white",
-                textDecoration: "none",
-              }}
-              eventKey={2}
-              href="#contact"
-            >
+            <Nav.Link eventKey={2}>
               <Link
                 style={{
                   fontFamily: "Georgia",
@@ -116,7 +100,9 @@ const MarcNavbar = () => {
                 }}
                 to="/contact"
               >
-                <p className={currentPage === "/contact" ? "underline" : ""}>Contact</p>
+                <p className={currentPage === "/contact" ? "underline" : ""}>
+                  Contact
+                </p>
               </Link>
             </Nav.Link>
           </Nav>

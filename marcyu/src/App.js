@@ -8,19 +8,74 @@ import MarcFooter from "./components/Footer";
 import RandomList from "./components/RandomList";
 
 function App() {
+  const time = new Date();
+  time.setSeconds(time.getSeconds() + 0.5);
+  let primary = ["Film", "TV", "Video Game", "Animation"];
+  let secondary = [
+    "Interactive",
+    "Theme Park",
+    "Multimedia",
+    "Multi-Genre",
+    "Library",
+    "Musical Theater",
+    "J-Pop & Anime",
+  ];
+
+  function removeItemPrimary(item) {
+    const index = primary.indexOf(item);
+    primary.splice(index, 1);
+    console.log(primary.length);
+    if (primary.length == 0) {
+      primary.push("Film", "TV", "Video Game", "Animation");
+    }
+  }
+
+  function removeItemSecondary(item) {
+    const index = secondary.indexOf(item);
+    secondary.splice(index, 1);
+    if (secondary.length == 0) {
+      secondary.push(
+        "Interactive",
+        "Theme Park",
+        "Multimedia",
+        "Multi-Genre",
+        "Library",
+        "Musical Theater",
+        "J-Pop & Anime"
+      );
+    }
+  }
+
   return (
     <>
       <div style={{ width: "100vw", background: "black" }}>
         <MarcNavbar />
-        <RandomList/>
+        <div
+          style={{
+            textAlign: "center",
+            paddingBottom: "20px",
+            height: "5rem",
+            fontWeight: 100,
+          }}
+          className="subhead"
+        >
+          <RandomList
+            primary={primary}
+            secondary={secondary}
+            removeItemPrimary={removeItemPrimary}
+            removeItemSecondary={removeItemSecondary}
+            time={time}
+            // style={{ height: "fit-content", overflow: "hidden  " }}
+          />
+        </div>
         <Container>
           <Row>
             <Col>
               <img style={{ width: "50vw" }} src={require("./marc_yu.jpeg")} />
             </Col>
             <Col>
-              <div class="textbox">
-                <h2 class="subhead">
+              <div className="textbox">
+                <h2 className="subhead" style={{ paddingBottom: "3%" }}>
                   Marc Yu is an award-winning pianist, composer, and arranger
                   from Los Angeles.
                 </h2>

@@ -3,7 +3,6 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import MarcNavbar from "../components/Navbar";
-import Quote from "../components/Quote";
 import MarcFooter from "../components/Footer";
 import Credit from "../components/Credit";
 
@@ -18,8 +17,8 @@ function Credits() {
           <Row>
             <Col />
             <Col xl={7}>
-              <div class="textboxCredits">
-                <h2 class="subheadCredits">Awards</h2>
+              <div className="textboxCredits">
+                <h2 className="subheadCredits">Awards</h2>
                 <br />
                 <ul>
                   <Credit
@@ -82,8 +81,8 @@ function Credits() {
           <Row>
             <Col />
             <Col xl={7}>
-              <div class="textboxCredits">
-                <h2 class="subheadCredits">Credits</h2>
+              <div className="textboxCredits">
+                <h2 className="subheadCredits">Credits</h2>
                 <ul>
                   <Credit
                     title="Missing Twin"
@@ -219,8 +218,8 @@ function Credits() {
                   fontSize: "1.1rem",
                 }}
               >
-                <div class="textboxCredits">
-                  <h2 class="subheadCredits">Other Recognitions</h2>
+                <div className="textboxCredits">
+                  <h2 className="subheadCredits">Other Recognitions</h2>
                   <b>Notable Performances</b>
                   <ul>
                     <li>BBC Proms at the Royal Albert Hall</li>
@@ -244,11 +243,12 @@ function Credits() {
                     <li>Mobile Symphony Orchestra</li>
                   </ul>
                   <br />
+
+                  <b>
+                    News, Television, Documentary, Book, and Speaking
+                    Appearances
+                  </b>
                   <ul>
-                    <b>
-                      News, Television, Documentary, Book, and Speaking
-                      Appearances
-                    </b>
                     <Credit
                       title="My Brilliant Brain"
                       from="National Geographic Documentary"

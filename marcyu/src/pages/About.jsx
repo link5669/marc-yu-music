@@ -13,8 +13,8 @@ function About() {
         <br />
         <Container>
           <Row>
-            <div class="textbox">
-              <h2 class="subheadTwo">About Marc Yu</h2>
+            <div className="textbox">
+              <h2 className="subheadTwo">About Marc Yu</h2>
               <img
                 src={require("../back.jpg")}
                 align="right"
@@ -59,7 +59,7 @@ function About() {
                 Marc has also performed and spoken at the{" "}
                 <b>Bi-Annual US-China Strategic Economic Dialogue</b> for the US
                 and Chinese Cabinets, the
-                <b>SENG Annual Conference</b>, <b>TEDx</b>, and the{" "}
+                <b> SENG Annual Conference</b>, <b>TEDx</b>, and the{" "}
                 <b>IdeaFestival</b> in Kentucky. <br />
                 <div style={{ height: "20px" }} />
                 Since studying with Professor Li Min Duo at the{" "}
@@ -69,7 +69,7 @@ function About() {
                 <b>Stalling</b>, <b>Shpilkes</b>, and <b>Scamper</b>, and more.
                 His professional work can also be heard on{" "}
                 <b>Netflix's animated series Ridley Jones</b>,
-                <b>Hallmark's A Paris Proposal</b> and{" "}
+                <b> Hallmark's A Paris Proposal</b> and{" "}
                 <b>A Very Venice Romance</b>, and psychological horror film{" "}
                 <b>The Lift</b> amongst others. In 2020, Marc co-founded{" "}
                 <b>Game Audio Workshop</b>, an organization dedicated to
@@ -78,7 +78,7 @@ function About() {
                 and <b>Game Music and Audio Conference</b>. Marc is also a
                 winner of the <b>Curtain Up</b> musical theater competition, and
                 the recipient of the
-                <b>Recognition of Leadership in Screen Scoring Award</b>,{" "}
+                <b> Recognition of Leadership in Screen Scoring Award</b>,{" "}
                 <b>Davidson Fellows Award</b>,{" "}
                 <b>Young Steinway Artist Award</b>, and the{" "}
                 <b>Innovation Award at the World Summit on Innovation</b>,

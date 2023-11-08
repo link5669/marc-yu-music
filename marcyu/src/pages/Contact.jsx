@@ -4,7 +4,6 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import MarcNavbar from "../components/Navbar";
-import Quote from "../components/Quote";
 import MarcFooter from "../components/Footer";
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
