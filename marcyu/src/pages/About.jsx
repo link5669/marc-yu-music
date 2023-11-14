@@ -67,7 +67,7 @@ function About() {
                 <b>Shanghai Conservatory of Music</b> and graduating from{" "}
                 <b>Berklee College of Music</b>, Marc has scored{" "}
                 <b>Lifetime's Missing Twin</b>, short films
-                <b>Stalling</b>, <b>Shpilkes</b>, and <b>Scamper</b>, and more.
+                <b> Stalling</b>, <b>Shpilkes</b>, and <b>Scamper</b>, and more.
                 His professional work can also be heard on{" "}
                 <b>Netflix's animated series Ridley Jones</b>,
                 <b> Hallmark's A Paris Proposal</b> and{" "}
