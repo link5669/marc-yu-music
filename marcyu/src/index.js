@@ -7,6 +7,7 @@ import About from "./pages/About";
 import Music from "./pages/Music";
 import Credits from "./pages/Credits";
 import Contact from "./pages/Contact";
+import Shpilke from "./pages/Shpilke";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -17,6 +18,7 @@ root.render(
       <Route path="/music" element={<Music/>}/>
       <Route path="/credits" element={<Credits/>}/>
       <Route path="/contact" element={<Contact/>}/>
+      <Route path="/music/shpilkes" element={<Shpilke/>}/>
     </Routes>
   </BrowserRouter>
 );

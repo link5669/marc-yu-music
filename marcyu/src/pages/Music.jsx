@@ -23,7 +23,7 @@ function Music() {
         <MarcNavbar />
         <br />
         <br />
-        <Container style={{ padding: "5%" }}>
+        <Container >
           <Row>
             <p
               style={{

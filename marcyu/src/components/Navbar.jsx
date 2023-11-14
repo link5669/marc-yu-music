@@ -21,13 +21,14 @@ const MarcNavbar = () => {
       collapseOnSelect
       expand="lg"
       sticky="top"
+      style={{paddingTop: "1%"}}
     >
       <Container>
         <Navbar.Brand
           className="font"
           style={{
             fontSize: "2rem",
-            padding: "1%",
+            paddingBottom: "2%",
           }}
           href="#home"
         >

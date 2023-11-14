@@ -1,4 +1,6 @@
-import ReactAudioPlayer from "react-audio-player";
+import AudioPlayer from "react-h5-audio-player";
+import "react-h5-audio-player/lib/styles.css";
+import { Link } from "react-router-dom";
 
 const Album = (props) => {
   return (
@@ -9,13 +11,15 @@ const Album = (props) => {
         src={props.img}
       />
       {props.file ? (
-        <div style={{paddingBottom: "5%"}}>
-        <ReactAudioPlayer id={props.id}
-          style={{ width: "100%", container: "square" }}
-          src={props.file}
-          autoPlay
-          controls
-        />
+        <div style={{ paddingBottom: "5%" }}>
+          <AudioPlayer
+            src={props.file}
+            onPlay={(e) => console.log("onPlay")}
+            showSkipControls={false}
+            showJumpControls={false}
+            layout={"stacked"}
+            style={{ backgroundColor: "black" }}
+          />
         </div>
       ) : (
         <></>
@@ -26,6 +30,13 @@ const Album = (props) => {
           <br />
         </b>
         <i>{props.description}</i>
+        {props.title == "Shpilkes" ? (
+          <div>
+            <Link style={{textDecoration: "none"}} to="/music/shpilkes">learn more</Link>
+          </div>
+        ) : (
+          <div style={{color: "black"}}>{"."}</div>
+        )}
       </p>
     </div>
   );

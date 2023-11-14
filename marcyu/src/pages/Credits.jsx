@@ -9,18 +9,17 @@ import Credit from "../components/Credit";
 function Credits() {
   return (
     <>
+      <MarcNavbar />
       <div
         style={{ width: "100vw", background: "black", lineHeight: "1.9rem" }}
       >
-        <MarcNavbar />
         <Container>
           <Row>
-            <Col />
-            <Col xl={7}>
+            <Col style={{ alignContent: "left", paddingLeft: "25%" }}>
               <div className="textboxCredits">
                 <h2 className="subheadCredits">Awards</h2>
                 <br />
-                <ul>
+                <ul style={{ paddingLeft: 0 }}>
                   <Credit
                     title="Outstanding Achievement in Leadership (2023)"
                     from="Berklee College of Music"
@@ -68,7 +67,6 @@ function Credits() {
                 </ul>
               </div>
             </Col>
-            <Col />
           </Row>
           <div style={{ paddingTop: "8%" }}></div>
           <div
@@ -79,11 +77,11 @@ function Credits() {
             }}
           />
           <Row>
-            <Col />
-            <Col xl={7}>
+            <Col style={{ alignContent: "left", paddingLeft: "25%" }}>
               <div className="textboxCredits">
                 <h2 className="subheadCredits">Credits</h2>
-                <ul>
+                <br />
+                <ul style={{ paddingLeft: 0 }}>
                   <Credit
                     title="Missing Twin"
                     from="Lifetime Feature Film | Composer"
@@ -184,7 +182,7 @@ function Credits() {
                   <br />
                   <Credit
                     title="Preludes for Emma"
-                    from="Video Game | Composer"
+                    from="Original Composition | Composer"
                   />
                   <Credit
                     title="Pilot Growth Equity"
@@ -198,7 +196,6 @@ function Credits() {
                 </ul>
               </div>
             </Col>
-            <Col />
           </Row>
           <div style={{ paddingTop: "5%" }}></div>
           <div
@@ -209,8 +206,7 @@ function Credits() {
             }}
           />
           <Row>
-            <Col />
-            <Col xl={7}>
+            <Col style={{ alignContent: "left", paddingLeft: "25%" }}>
               <div
                 style={{
                   color: "white",
@@ -220,8 +216,10 @@ function Credits() {
               >
                 <div className="textboxCredits">
                   <h2 className="subheadCredits">Other Recognitions</h2>
-                  <b>Notable Performances</b>
-                  <ul>
+                  <br />
+
+                  <ul style={{ paddingLeft: 0 }}>
+                    <b>Notable Performances</b>
                     <li>BBC Proms at the Royal Albert Hall</li>
                     <li>Carnegie Hall with Lang Lang</li>
                     <li>GRAMMYs’ Salute to Classical Music at Disney Hall</li>
@@ -234,8 +232,9 @@ function Credits() {
                     </li>
                   </ul>
                   <br />
-                  <b>Notable Orchestral Performances</b>
-                  <ul>
+
+                  <ul style={{ paddingLeft: 0 }}>
+                    <b>Notable Orchestral Performances</b>
                     <li>Warsaw National Philharmonic</li>
                     <li>Reno Philharmonic</li>
                     <li>California Philharmonic Orchestra</li>
@@ -244,11 +243,11 @@ function Credits() {
                   </ul>
                   <br />
 
-                  <b>
-                    News, Television, Documentary, Book, and Speaking
-                    Appearances
-                  </b>
-                  <ul>
+                  <ul style={{ paddingLeft: 0 }}>
+                    <b>
+                      News, Television, Documentary, Book, and Speaking
+                      Appearances
+                    </b>
                     <Credit
                       title="My Brilliant Brain"
                       from="National Geographic Documentary"
@@ -272,7 +271,6 @@ function Credits() {
                 </div>
               </div>
             </Col>
-            <Col />
           </Row>
           <br />
           <br />

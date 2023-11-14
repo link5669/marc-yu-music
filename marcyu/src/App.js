@@ -52,38 +52,53 @@ function App() {
         <MarcNavbar />
         <div
           style={{
-            textAlign: "center",
             paddingBottom: "20px",
             height: "5rem",
             fontWeight: 100,
           }}
           className="subhead"
         >
-          <RandomList
-            primary={primary}
-            secondary={secondary}
-            removeItemPrimary={removeItemPrimary}
-            removeItemSecondary={removeItemSecondary}
-            time={time}
-            // style={{ height: "fit-content", overflow: "hidden  " }}
-          />
+          <Row>
+            <Col style={{ textAlign: "right" }}>
+              <RandomList
+                primary={primary}
+                secondary={secondary}
+                removeItemPrimary={removeItemPrimary}
+                removeItemSecondary={removeItemSecondary}
+                time={time}
+                // style={{ height: "fit-content", overflow: "hidden  " }}
+              />
+            </Col>
+            <Col>
+              <span style={{textAlign: "left" }}>
+                {"| "}
+                COMPOSER
+              </span>
+            </Col>
+          </Row>
         </div>
         <Container>
           <Row>
             <Col>
-              <img style={{ width: "50vw" }} src={require("./marc_yu.jpeg")} />
+              <img
+                style={{ width: "50vw", paddingRight: "5%" }}
+                src={require("./marc_yu.jpeg")}
+              />
             </Col>
             <Col>
               <div className="textbox">
-                <h2 className="subhead" style={{ paddingBottom: "3%" }}>
-                  Marc Yu is an award-winning pianist, composer, and arranger
-                  from Los Angeles.
+                <h2 className="subhead" style={{ paddingBottom: "7%" }}>
+                  <b>
+                    Marc Yu is an award-winning pianist, composer, and arranger
+                    from Los Angeles.
+                  </b>
                 </h2>
                 <p
                   style={{
                     color: "white",
                     fontFamily: "Georgia",
                     lineHeight: "2rem",
+                    fontSize: ".9em",
                   }}
                 >
                   With a passion for film and mixed media, Marc has scored

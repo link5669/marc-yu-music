@@ -14,12 +14,13 @@ function About() {
         <Container>
           <Row>
             <div className="textbox">
-              <h2 className="subheadTwo">About Marc Yu</h2>
               <img
                 src={require("../back.jpg")}
                 align="right"
-                style={{ width: "50vw", float: "right", padding: "30px" }}
+                style={{ width: "50vw", float: "right", padding: "30px", paddingTop: "0px" }}
               />
+              <h2 className="subheadTwo">About Marc Yu</h2>
+
               <p
                 style={{
                   color: "white",

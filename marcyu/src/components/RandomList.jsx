@@ -58,19 +58,23 @@ const RandomList = (props) => {
 
   return (
     <>
-      <div style={{ justifyContent: "center" }}>
-        {isRunning ? (
-          <TextLoop interval="10" style={{ padding: 0, margin: 0 }}>
-            {words.map((word, index) => (
-              <p key={index}>{word.toUpperCase()}</p>
-            ))}
-          </TextLoop>
-        ) : (
-          <span>{currWord.toUpperCase()} </span>
-        )}
-        {" | "}
-        COMPOSER
-      </div>
+      <span style={{ color: "grey" }}>
+        <i>
+          {isRunning ? (
+            <TextLoop interval="10" style={{ padding: 0, margin: 0 }}>
+              {words.map((word, index) => (
+                <p key={index}>
+                  <span >
+                    {word.toUpperCase()}
+                  </span>
+                </p>
+              ))}
+            </TextLoop>
+          ) : (
+            <span>{currWord.toUpperCase()} </span>
+          )}
+        </i>
+      </span>
     </>
   );
 };
