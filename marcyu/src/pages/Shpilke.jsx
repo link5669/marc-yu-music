@@ -28,7 +28,12 @@ function Shpilke() {
     { title: "Shpilkes", track: shpilkes, index: "5", length: "0:35" },
   ];
 
-  const [selectedTrack, setSelectedTrack] = useState({});
+  const [selectedTrack, setSelectedTrack] = useState({
+    title: "Tokhter's Visit",
+    track: tochter,
+    index: "1",
+    length: "0:44",
+  });
 
   const handleClick = (track) => {
     setSelectedTrack(track);
@@ -42,7 +47,6 @@ function Shpilke() {
   });
 
   const handleHoverEnter = (item) => {
-    console.log(item);
     setHoveredItem(item);
   };
 
@@ -59,15 +63,32 @@ function Shpilke() {
             <Col style={{ alignContent: "left", paddingLeft: "18%" }}>
               <h2
                 class="subheadAlbum"
-                style={{ paddingTop: "3%", paddingBottom: "1%" }}
+                style={{
+                  paddingTop: "3%",
+                  textAlign: "center",
+                  paddingRight: "18%",
+                  fontWeight: 100,
+                  fontStyle: "bold",
+                }}
               >
                 Shpilkes
               </h2>
+              <p
+                style={{
+                  color: "white",
+                  fontFamily: "Georgia",
+                  textAlign: "center",
+                  paddingRight: "18%",
+                  paddingBottom: "1%",
+                }}
+              >
+                <i>Short Film / Psychological Thriller</i>
+              </p>
               <Container>
                 <Row>
-                  <Col xl={5}>
+                  <Col xl={4}>
                     <img
-                      style={{ width: "100%", borderRadius: "15px" }}
+                      style={{ width: "100%", borderRadius: "10px" }}
                       alt="album cover"
                       src={shp}
                     />
@@ -77,20 +98,25 @@ function Shpilke() {
                       onPlay={(e) => console.log("onPlay")}
                       showSkipControls={false}
                       layout={"stacked"}
-                      style={{ backgroundColor: "black" }}
+                      style={{
+                        backgroundColor: "#1b1b1b",
+                        borderRadius: "10px",
+                      }}
                     />
                     <br />
                     {tracks.map((track, index) => {
                       return (
                         <p
                           style={{
+                            color: "white",
                             marginBottom: "0",
                             fontSize: "1.1rem",
                             marginLeft: "1.1%",
-                            color:
+                            backgroundColor:
                               hoveredItem.index === track.index
-                                ? "white"
-                                : "gray",
+                                ? "gray"
+                                : "black",
+                                borderRadius: "6px"
                           }}
                           key={index}
                           onClick={() => handleClick(track)}
@@ -102,7 +128,14 @@ function Shpilke() {
                         </p>
                       );
                     })}
-                    <div style={{paddingInline: "20%", display: "flex", width: "100%", justifyContent: "space-between"}}>
+                    <div
+                      style={{
+                        paddingInline: "20%",
+                        display: "flex",
+                        width: "100%",
+                        justifyContent: "space-between",
+                      }}
+                    >
                       <a href="https://twitter.com/MarcYuMusic">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -185,11 +218,25 @@ function Shpilke() {
                   </Col>
                   <Col style={{ paddingRight: "18%", paddingLeft: "2%" }}>
                     <div style={{ color: "white", fontFamily: "Georgia" }}>
-                      <h3>Credits</h3>
+                      <h3>SUMMARY</h3>
+                      <p style={{ fontSize: "1.1rem", color: "#B9BAB9" }}>
+                        Culpa excepturi ut aperiam cumque suscipit. Non facilis
+                        accusamus et reprehenderit molestiae. Sed et voluptas
+                        quia nobis soluta repellendus. Dolores sint labore
+                        voluptatem voluptatibus aut non numquam ipsa. Esse eaque
+                        dolorum eligendi. Totam aut voluptatem ab quibusdam
+                        dolore placeat et aliquid. Excepturi repellendus
+                        molestiae atque maxime et nulla. Quod nobis tenetur
+                        commodi eum accusantium facere qui. Beatae deleniti ad
+                        consequatur veritatis cum. Adipisci sequi voluptatibus
+                        aut non numquam ipsa et voluptas quia nobis soluta .
+                      </p>
+                      <div style={{ paddingBottom: "5%" }}></div>
+                      <h3>CREDITS</h3>
                       <ul
                         style={{
-                          listStyleType: "-",
-                          paddingLeft: "4%",
+                          listStyleType: "none",
+                          paddingLeft: "0",
                           marginBottom: "1%",
                         }}
                       >
@@ -197,16 +244,25 @@ function Shpilke() {
                           Director:{" "}
                           <span style={{ color: "#B9BAB9" }}>Morgan Berg</span>
                         </li>
-                        <li style={{ paddingBottom: "2%" }}>
+                        <li>
                           Editor:{" "}
                           <span style={{ color: "#B9BAB9" }}>
                             Madison Chute
                           </span>
                         </li>
-                        <li style={{ paddingBottom: "2%" }}>
-                          Composed by:
+                        <br />
+                        <li>
+                          Composer:
                           <span style={{ color: "#B9BAB9" }}> Marc Yu</span>
                         </li>
+                        <br />
+                        <li>
+                          Score Mixing & Mastering Engineer:{" "}
+                          <span style={{ color: "#B9BAB9" }}>
+                            Austin Leshock
+                          </span>{" "}
+                        </li>
+                        <br />
                         <li>
                           Vocalist:{" "}
                           <span style={{ color: "#B9BAB9" }}>
@@ -219,32 +275,13 @@ function Shpilke() {
                             Logan Mitchell
                           </span>
                         </li>
-                        <li style={{ paddingBottom: "2%" }}>
+                        <li>
                           Viola:{" "}
                           <span style={{ color: "#B9BAB9" }}>
                             Simon B. Amaya Price
                           </span>
                         </li>
-                        <li>
-                          Mixing & Mastering by:{" "}
-                          <span style={{ color: "#B9BAB9" }}>
-                            Austin Leshock
-                          </span>{" "}
-                        </li>
                       </ul>
-                      <div style={{ paddingBottom: "5%" }}></div>
-                      <h3>Summary</h3>
-                      <p style={{ fontSize: "1.1rem", color: "#B9BAB9" }}>
-                        Culpa excepturi ut aperiam cumque suscipit. Non facilis
-                        accusamus et reprehenderit molestiae. Sed et voluptas
-                        quia nobis soluta repellendus. Dolores sint labore
-                        voluptatem voluptatibus aut non numquam ipsa. Esse eaque
-                        dolorum eligendi. Totam aut voluptatem ab quibusdam
-                        dolore placeat et aliquid. Excepturi repellendus
-                        molestiae atque maxime et nulla. Quod nobis tenetur
-                        commodi eum accusantium facere qui. Beatae deleniti ad
-                        consequatur veritatis cum. Adipisci sequi.
-                      </p>
                     </div>
                   </Col>
                 </Row>

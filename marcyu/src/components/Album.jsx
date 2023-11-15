@@ -5,11 +5,24 @@ import { Link } from "react-router-dom";
 const Album = (props) => {
   return (
     <div style={{ width: "100%", paddingBottom: "12%" }}>
-      <img
-        style={{ width: "100%", paddingBottom: "10%" }}
-        alt="album cover"
-        src={props.img}
-      />
+      {props.title == "Shpilkes" ? (
+        <Link
+          style={{ textDecoration: "none", color: "gray" }}
+          to="/music/shpilkes"
+        >
+          <img
+            style={{ width: "100%", paddingBottom: "10%" }}
+            alt="album cover"
+            src={props.img}
+          />
+        </Link>
+      ) : (
+        <img
+          style={{ width: "100%", paddingBottom: "10%" }}
+          alt="album cover"
+          src={props.img}
+        />
+      )}
       {props.file ? (
         <div style={{ paddingBottom: "5%" }}>
           <AudioPlayer
@@ -18,7 +31,7 @@ const Album = (props) => {
             showSkipControls={false}
             showJumpControls={false}
             layout={"stacked"}
-            style={{ backgroundColor: "black" }}
+            style={{ backgroundColor: "#1b1b1b", borderRadius: "10px" }}
           />
         </div>
       ) : (
@@ -32,10 +45,15 @@ const Album = (props) => {
         <i>{props.description}</i>
         {props.title == "Shpilkes" ? (
           <div>
-            <Link style={{textDecoration: "none"}} to="/music/shpilkes">learn more</Link>
+            <Link
+              style={{ textDecoration: "none", color: "gray" }}
+              to="/music/shpilkes"
+            >
+              Learn more...
+            </Link>
           </div>
         ) : (
-          <div style={{color: "black"}}>{"."}</div>
+          <div style={{ color: "black" }}>{"."}</div>
         )}
       </p>
     </div>

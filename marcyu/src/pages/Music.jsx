@@ -13,8 +13,8 @@ import stalling from "../assets/STL+Album+Cover.png";
 import stallingAudio from "../assets/STL+DEMO+M10+At+Shit_s+End.mp3";
 import bardAudio from "../assets/NRS+DEMO+105+Pursuit.mp3";
 import shpAudio from "../assets/SHP+M03v3_Final+Mix_320kbps.mp3";
-import missingTwin from "../assets/HMT+Album+Cover.jpg"
-import alistair from "../assets/BXR+Album+Cover.jpg"
+import missingTwin from "../assets/HMT+Album+Cover.jpg";
+import alistair from "../assets/BXR+Album+Cover.jpg";
 
 function Music() {
   return (
@@ -23,7 +23,7 @@ function Music() {
         <MarcNavbar />
         <br />
         <br />
-        <Container >
+        <Container>
           <Row>
             <p
               style={{
@@ -41,16 +41,46 @@ function Music() {
               </i>
             </p>
             <Col style={{ padding: "3%" }}>
-              <Album id="shp" img={shp} file={shpAudio} title="Shpilkes" description="Short Film / Psychological Thriller" />
-              <Album img={bard2} title="A Bard’s Tale: The Plane of Elemental Chaos Vol. 1" description="Library Music / Contemporary" />
+              <Album
+                id="shp"
+                img={shp}
+                file={shpAudio}
+                title="Shpilkes"
+                description="Short Film / Psychological Thriller"
+              />
+              <Album
+                img={bard2}
+                title="A Bard’s Tale: The Plane of Elemental Chaos Vol. 1"
+                description="Library Music / Contemporary"
+              />
             </Col>
             <Col style={{ padding: "3%" }}>
-              <Album id="bard1" img={bard1} file={bardAudio} title="A Bard’s Tale: Norse Vol. 1" description="Library Music / Norse, Folk, Metal" />
-              <Album img={missingTwin} title="Missing Twin" description="Feature Film / Drama, Thriller" />
+              <Album
+                id="bard1"
+                img={bard1}
+                file={bardAudio}
+                title="A Bard’s Tale: Norse Vol. 1"
+                description="Library Music / Norse, Folk, Metal"
+              />
+              <Album
+                img={missingTwin}
+                title="Missing Twin"
+                description="Feature Film / Drama, Thriller"
+              />
             </Col>
             <Col style={{ padding: "3%" }}>
-              <Album id="stalling" img={stalling} file={stallingAudio} title="Stalling" description="Short Film / Musical Comedy" />
-              <Album img={alistair} title="Alistair" description="Video Game / Horror, Electronic" />
+              <Album
+                id="stalling"
+                img={stalling}
+                file={stallingAudio}
+                title="Stalling"
+                description="Short Film / Musical Comedy"
+              />
+              <Album
+                img={alistair}
+                title="Alistair"
+                description="Video Game / Horror, Electronic"
+              />
             </Col>
           </Row>
           <div style={{ paddingTop: "5%" }}></div>
