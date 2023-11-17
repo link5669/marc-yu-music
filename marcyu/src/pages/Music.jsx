@@ -10,9 +10,6 @@ import shp from "../assets/shp.jpeg";
 import bard1 from "../assets/DND+NRS+Album+Cover.png";
 import bard2 from "../assets/DND+ELM+Album+Cover.jpeg";
 import stalling from "../assets/STL+Album+Cover.png";
-import stallingAudio from "../assets/STL+DEMO+M10+At+Shit_s+End.mp3";
-import bardAudio from "../assets/NRS+DEMO+105+Pursuit.mp3";
-import shpAudio from "../assets/SHP+M03v3_Final+Mix_320kbps.mp3";
 import missingTwin from "../assets/HMT+Album+Cover.jpg";
 import alistair from "../assets/BXR+Album+Cover.jpg";
 
@@ -44,9 +41,14 @@ function Music() {
               <Album
                 id="shp"
                 img={shp}
-                file={shpAudio}
-                title="Shpilkes"
+                file={"none"}
+                title="Shpilkes Preview"
                 description="Short Film / Psychological Thriller"
+                info={[
+                  {
+                    title: "Shpilkes Preview",
+                  },
+                ]}
               />
               <Album
                 img={bard2}
@@ -58,9 +60,14 @@ function Music() {
               <Album
                 id="bard1"
                 img={bard1}
-                file={bardAudio}
+                file={"none"}
                 title="A Bard’s Tale: Norse Vol. 1"
                 description="Library Music / Norse, Folk, Metal"
+                info={[
+                  {
+                    title: "A Bard’s Tale: Norse Vol. 1",
+                  },
+                ]}
               />
               <Album
                 img={missingTwin}
@@ -72,9 +79,14 @@ function Music() {
               <Album
                 id="stalling"
                 img={stalling}
-                file={stallingAudio}
+                file={"none"}
                 title="Stalling"
                 description="Short Film / Musical Comedy"
+                info={[
+                  {
+                    title: "Stalling",
+                  },
+                ]}
               />
               <Album
                 img={alistair}
