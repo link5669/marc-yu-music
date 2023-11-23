@@ -79,8 +79,8 @@ const NewAudioPlayer = ({ trackName, songs, trackInfo }) => {
                           class="bi bi-play-fill"
                           viewBox="0 0 16 16"
                           style={{
-                            width: "40px", // Adjust the width of the SVG as needed
-                            height: "40px", // Adjust the height of the SVG as needed
+                            width: "40px", 
+                            height: "40px", 
                             transform: "translateX(1px)",
                           }}
                         >
@@ -92,7 +92,7 @@ const NewAudioPlayer = ({ trackName, songs, trackInfo }) => {
                   <input
                     type="range"
                     value={player.trackProgress}
-                    step="1"
+                    step=".1"
                     min="0"
                     max={
                       player.duration ? player.duration : `${player.duration}`

@@ -70,9 +70,11 @@ function App() {
               />
             </Col>
             <Col>
-              <span style={{textAlign: "left" }}>
-                {"| "}
-                COMPOSER
+              <span style={{ textAlign: "left", color: "gray" }}>
+                <i>
+                  {"| "}
+                  COMPOSER
+                </i>
               </span>
             </Col>
           </Row>

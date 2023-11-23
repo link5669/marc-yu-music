@@ -87,12 +87,20 @@ function Credits() {
                     from="Lifetime Feature Film | Composer"
                   />
                   <Credit
+                    title="Moonstruck"
+                    from="Feature Film | Arranger"
+                  />
+                  <Credit
                     title="A Paris Proposal "
                     from="Hallmark Feature Film | Composer Assistant"
                   />
                   <Credit
                     title="A Very Venice Romance"
                     from="Hallmark Feature Film | Composer Assistant"
+                  />
+                  <Credit
+                    title="Daydreamers"
+                    from="Feature Film | Composer Assistant"
                   />
                   <Credit
                     title="Joyeux Noel"
@@ -103,9 +111,13 @@ function Credits() {
                     from="Feature Film | Composer Assistant"
                   />
                   <br />
+                  <Credit title="Afterlife" from="Short Film | Composer" />
+                  <Credit title="Beach Trip!" from="Short Film | Composer" />
+                  <Credit title="Dream Factory" from="Short Film | Composer" />
                   <Credit title="Scamper" from="Short Film | Composer" />
                   <Credit title="Shpilkes" from="Short Film | Composer" />
                   <Credit title="Stalling" from="Short Film | Composer" />
+                  <Credit title="Inheritance" from="Short Film | Composer Assistant" />
                   <Credit
                     title="Ceiba Y Sus Raíces Taínas"
                     from="Short Film | Music Supervisor"
@@ -120,7 +132,9 @@ function Credits() {
                     from="TV Series | Composer Assistant"
                   />
                   <br />
+                  <Credit title="String" from="Video Game | Director" />
                   <Credit title="Alistair" from="Video Game | Composer" />
+                  <Credit title="Potion Pushas" from="Video Game | Composer" />
                   <Credit
                     title="Jade Island Simulator"
                     from="Video Game | Audio Director"
@@ -133,13 +147,17 @@ function Credits() {
                     title="Esception"
                     from="Video Game | Sound Designer"
                   />
+                  <Credit
+                    title="Mushroom Kid's Big Grass Sword"
+                    from="Video Game |Music Coordinating Consultant"
+                  />
                   <br />
                   <Credit
                     title="Nightingale’s Piano Bar (Disney Wish)"
                     from="Disneyland Cruise Line | Arranger"
                   />
                   <Credit
-                    title="Zootopia Artist Loft Storefront"
+                    title="City of Zootopia: Artist Loft Storefront"
                     from="Disneyland Parks | Arranger"
                   />
                   <Credit
@@ -173,6 +191,10 @@ function Credits() {
                   />
                   <Credit
                     title="The High Citadel"
+                    from="Library Music | Composer Assistant"
+                  />
+                  <Credit
+                    title="The Spiral Staircase"
                     from="Library Music | Composer Assistant"
                   />
                   <Credit

@@ -40,15 +40,19 @@ const Album = (props) => {
           <br />
         </b>
         <i>{props.description}</i>
-        {props.title == "Shpilkes Preview" ? (
-          <div>
-            <Link
-              style={{ textDecoration: "none", color: "gray" }}
-              to="/music/shpilkes"
-            >
-              Learn more...
-            </Link>
-          </div>
+        {props.info ? (
+          props.info[0].title == "Shpilkes Preview" ? (
+            <div>
+              <Link
+                style={{ textDecoration: "none", color: "gray" }}
+                to="/music/shpilkes"
+              >
+                Learn more...
+              </Link>
+            </div>
+          ) : (
+            <div style={{ color: "black" }}>{"."}</div>
+          )
         ) : (
           <div style={{ color: "black" }}>{"."}</div>
         )}

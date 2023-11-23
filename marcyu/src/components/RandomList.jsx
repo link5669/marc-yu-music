@@ -58,7 +58,7 @@ const RandomList = (props) => {
         <i>
           {isRunning ? (
             <div style={{ float: "right", display: "flex" }}>
-              <TextLoop interval="150" style={{ padding: 0, margin: 0 }}>
+              <TextLoop interval="10" style={{ padding: 0, margin: 0 }}>
                 {words.map((word, index) => (
                   <p key={index} style={{ float: "right", display: "flex" }}>
                     <span style={{ textAlign: "right" }}>
