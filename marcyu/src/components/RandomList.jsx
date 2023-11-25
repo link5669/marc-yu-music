@@ -7,18 +7,27 @@ const RandomList = (props) => {
   const [currWord, setCurrWord] = useState("");
   let primary = ["Film", "TV", "Video Game", "Animation"];
   const [words, setWords] = useState([
-    "Film",
-    "TV",
+    "Video Gaame",
+    "Animaaation",
+    "Interactive",
+    "Theme Paark",
+    "Multimediaa",
+    "Multi-Genre",
+  ]);
+
+  const allWords = [
     "Video Game",
     "Animation",
     "Interactive",
     "Theme Park",
     "Multimedia",
     "Multi-Genre",
-    "Library",
-    "Musical Theater",
     "J-Pop & Anime",
-  ]);
+    "Film",
+    "TV",
+    "Video Game",
+    "Animation",
+  ];
   const { isRunning, restart } = useTimer({
     autoStart: true,
     expiryTimestamp: timestamp,
@@ -33,7 +42,7 @@ const RandomList = (props) => {
           props.primary[Math.floor(Math.random() * props.primary.length)];
         props.removeItemPrimary(nextWord);
       }
-      setWords([nextWord, ...words])
+      setWords([nextWord, ...words]);
       setCurrWord(nextWord);
       const time = new Date();
       time.setSeconds(time.getSeconds() + 5);
@@ -54,25 +63,22 @@ const RandomList = (props) => {
 
   return (
     <>
-      <span style={{ color: "#c0c0c0" }}>
-        <i>
-          {isRunning ? (
-            <div style={{ float: "right", display: "flex" }}>
-              <TextLoop interval="10" style={{ padding: 0, margin: 0 }}>
-                {words.map((word, index) => (
-                  <p key={index} style={{ float: "right", display: "flex" }}>
-                    <span style={{ textAlign: "right" }}>
-                      {word.toUpperCase()}
-                    </span>
-                  </p>
-                ))}
-              </TextLoop>
-            </div>
-          ) : (
-            <span>{currWord.toUpperCase()} </span>
-          )}
-        </i>
-      </span>
+      <i>
+        {isRunning ? (
+        <div style={{ textAlign: "right" }}>
+          <TextLoop
+            interval="20"
+            style={{ textAlign: "right", padding: 0, margin: 0 }}
+          >
+            {words.map((word, index) => (
+              <span key={index}>{word.toUpperCase()}</span>
+            ))}
+          </TextLoop>
+        </div>
+        ) : (
+          <span>{currWord.toUpperCase()} </span>
+        )}
+      </i>
     </>
   );
 };

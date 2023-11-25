@@ -37,7 +37,7 @@ function Music() {
                 to request a custom demo reel!
               </i>
             </p>
-            <Col style={{ padding: "3%" }}>
+            <Col style={{ padding: "3%", paddingLeft: "8%" }}>
               <Album
                 id="shp"
                 img={shp}
@@ -75,7 +75,7 @@ function Music() {
                 description="Feature Film / Drama, Thriller"
               />
             </Col>
-            <Col style={{ padding: "3%" }}>
+            <Col style={{ padding: "3%", paddingRight: "8%" }}>
               <Album
                 id="stalling"
                 img={stalling}

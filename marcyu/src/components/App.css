@@ -48,7 +48,7 @@
   height: 5px;
   cursor: pointer;
   box-shadow: 0px 0px 0px #000000;
-  background: #000000;
+  /* background: #000000; */
 }
 
 .progress::-webkit-slider-thumb {
@@ -58,13 +58,13 @@
   width: 8px;
   border-radius: 25px;
   background: #a1d0ff;
-  cursor: pointer;
+  /* cursor: pointer; */
   -webkit-appearance: none;
   margin-top: -1px;
 }
 
 .progress:focus::-webkit-slider-runnable-track {
-  background: #666666;
+  /* background: #666666; */
 }
 
 .track-actions {

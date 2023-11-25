@@ -25,7 +25,10 @@ const NewAudioPlayer = ({
     autoStart: true,
     expiryTimestamp: timestamp,
     onExpire: () => {
-      if (globalPlayer.trackIndex != playingTrackIndex) {
+      if (
+        globalPlayer.trackIndex != playingTrackIndex &&
+        setPlayingTrackIndex
+      ) {
         setPlayingTrackIndex(globalPlayer.trackIndex);
       }
       const time = new Date();
@@ -38,7 +41,10 @@ const NewAudioPlayer = ({
     autoStart: false,
     expiryTimestamp: timestamp,
     onExpire: () => {
-      if (globalPlayer.trackIndex != playingTrackIndex) {
+      if (
+        globalPlayer.trackIndex != playingTrackIndex &&
+        setPlayingTrackIndex
+      ) {
         setPlayingTrackIndex(globalPlayer.trackIndex);
       }
       const time = new Date();
@@ -58,11 +64,6 @@ const NewAudioPlayer = ({
     console.log(songs, trackName, trackInfo);
     globalPlayer.setTrackIndex(trackIndex);
   }, [trackName]);
-
-  useEffect(() => {
-    console.log("alksjd");
-    setPlayingTrackIndex(globalPlayer.trackIndex);
-  }, [globalPlayer]);
 
   return (
     <Reaplay tracks={songs} startIndex={0} isPlaying={false}>
@@ -106,6 +107,11 @@ const NewAudioPlayer = ({
                     onMouseUp={(e) => player.onScrubEnd(e)}
                     onKeyUp={(e) => player.onScrubEnd(e)}
                     style={{
+                      background: `linear-gradient(to right, gray 0%, gray ${
+                        (player.trackProgress / player.duration) * 100
+                      }%, #DEE2E6 ${
+                        (player.trackProgress / player.duration) * 100
+                      }%, #DEE2E6 100%)`,
                       alignSelf: "center",
                       maxWidth: "60%",
                     }}
@@ -118,10 +124,6 @@ const NewAudioPlayer = ({
                       fontSize: ".96rem",
                       fontFamily: "Georgia",
                       paddingLeft: "5px",
-                    }}
-                    onChange={() => {
-                      console.log("alksjd");
-                      setPlayingTrackIndex(player.trackIndex);
                     }}
                   >
                     {player.trackProgressText.substring(1)}/

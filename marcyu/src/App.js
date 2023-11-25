@@ -12,7 +12,7 @@ function App() {
   const isMobile = Math.min(width, height) < 768;
   const time = new Date();
   time.setSeconds(time.getSeconds() + 0.5);
-  let primary = ["Film", "TV", "Video Game", "Animation"];
+  let primary = ["      Film", "        TV", "Video Game", "Animation"];
   let secondary = [
     "Interactive",
     "Theme Park",
@@ -87,7 +87,7 @@ function App() {
         </div>
         <Container>
           <Row>
-            <Col style={{display: isMobile ? "none" : ""}}>
+            <Col style={{ display: isMobile ? "none" : "" }}>
               <img style={{ width: "100%" }} src={require("./marc_yu.jpeg")} />
             </Col>
             <Col>
@@ -103,7 +103,7 @@ function App() {
                     color: "white",
                     fontFamily: "Georgia",
                     lineHeight: "2rem",
-                    fontSize: ".9em",
+                    fontSize: "1em",
                   }}
                 >
                   With a passion for film and mixed media, Marc has scored
@@ -118,7 +118,10 @@ function App() {
                   bring visual media to life.
                 </p>
               </div>
-              <img style={{ width: "100%", display: isMobile ? "" : "none" }} src={require("./marc_yu.jpeg")} />
+              <img
+                style={{ width: "100%", display: isMobile ? "" : "none" }}
+                src={require("./marc_yu.jpeg")}
+              />
             </Col>
           </Row>
           <div style={{ paddingTop: "5%" }}></div>
