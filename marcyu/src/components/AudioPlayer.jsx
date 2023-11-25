@@ -1,15 +1,52 @@
 import "./App.css";
 import React, { useEffect } from "react";
 import { Reaplay } from "reaplay";
+import PlayPause from "./PlayPause";
+import { useTimer } from "react-timer-hook";
 
-const NewAudioPlayer = ({ trackName, songs, trackInfo }) => {
+const NewAudioPlayer = ({
+  trackName,
+  songs,
+  trackInfo,
+  playingTrackIndex,
+  setPlayingTrackIndex,
+}) => {
   let globalPlayer;
+  let trackIndex = 0;
   if (trackName == "Shpilkes Preview")
     songs = [require("../assets/shp/SHP_Soundtrack_Preview_v1.mp3")];
   else if (trackName == "Stalling")
     songs = [require("../assets/STL+DEMO+M10+At+Shit_s+End.mp3")];
   else if (trackName == "A Bard’s Tale: Norse Vol. 1")
     songs = [require("../assets/NRS+DEMO+105+Pursuit.mp3")];
+  let timestamp = new Date();
+  timestamp.setSeconds(timestamp.getSeconds() + 1);
+  const { isRunning, restart } = useTimer({
+    autoStart: true,
+    expiryTimestamp: timestamp,
+    onExpire: () => {
+      if (globalPlayer.trackIndex != playingTrackIndex) {
+        setPlayingTrackIndex(globalPlayer.trackIndex);
+      }
+      const time = new Date();
+      time.setSeconds(time.getSeconds() + 1);
+      restartSecond(time);
+    },
+  });
+
+  const { restart: restartSecond } = useTimer({
+    autoStart: false,
+    expiryTimestamp: timestamp,
+    onExpire: () => {
+      if (globalPlayer.trackIndex != playingTrackIndex) {
+        setPlayingTrackIndex(globalPlayer.trackIndex);
+      }
+      const time = new Date();
+      time.setSeconds(time.getSeconds() + 0.5);
+      timestamp += 2000;
+      restart(time);
+    },
+  });
 
   useEffect(() => {
     let trackIndex = -1;
@@ -18,20 +55,31 @@ const NewAudioPlayer = ({ trackName, songs, trackInfo }) => {
         trackIndex = i;
       }
     }
-    console.log(songs, trackName, trackInfo)
+    console.log(songs, trackName, trackInfo);
     globalPlayer.setTrackIndex(trackIndex);
   }, [trackName]);
+
+  useEffect(() => {
+    console.log("alksjd");
+    setPlayingTrackIndex(globalPlayer.trackIndex);
+  }, [globalPlayer]);
 
   return (
     <Reaplay tracks={songs} startIndex={0} isPlaying={false}>
       {(player) => {
         globalPlayer = player;
+        trackIndex = player.trackIndex;
         return (
           <>
             <div className="audio-player">
-              <h1 className="track-name">{trackName}</h1>
               <div style={{ alignItems: "center", width: "100%" }}>
-                <div style={{ display: "flex", paddingBottom: "8px" }}>
+                <div
+                  style={{
+                    display: "flex",
+                    paddingBottom: "8px",
+                    paddingTop: "8px",
+                  }}
+                >
                   <div
                     className={`circular-play-pause-button ${
                       player.isPlaying ? "playing" : ""
@@ -43,56 +91,12 @@ const NewAudioPlayer = ({ trackName, songs, trackInfo }) => {
                       alignSelf: "center",
                     }}
                   >
-                    {player.isPlaying ? (
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="currentColor"
-                        class="bi bi-pause"
-                        viewBox="0 0 16 16"
-                        style={{
-                          position: "relative",
-                          width: "40px",
-                          height: "40px",
-                          borderStyle: "solid",
-                          borderColor: "black",
-                          borderRadius: "50%",
-                        }}
-                      >
-                        <path d="M6 3.5a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5zm4 0a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5z" />
-                      </svg>
-                    ) : (
-                      <div
-                        style={{
-                          display: "flex",
-                          justifyContent: "center",
-                          alignItems: "center",
-                          width: "40px",
-                          height: "40px",
-                          borderStyle: "solid",
-                          borderColor: "black",
-                          borderRadius: "50%",
-                        }}
-                      >
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="currentColor"
-                          class="bi bi-play-fill"
-                          viewBox="0 0 16 16"
-                          style={{
-                            width: "40px", 
-                            height: "40px", 
-                            transform: "translateX(1px)",
-                          }}
-                        >
-                          <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z" />
-                        </svg>
-                      </div>
-                    )}
+                    <PlayPause isPlaying={player.isPlaying} />
                   </div>
                   <input
                     type="range"
                     value={player.trackProgress}
-                    step=".1"
+                    step=".01"
                     min="0"
                     max={
                       player.duration ? player.duration : `${player.duration}`
@@ -103,13 +107,21 @@ const NewAudioPlayer = ({ trackName, songs, trackInfo }) => {
                     onKeyUp={(e) => player.onScrubEnd(e)}
                     style={{
                       alignSelf: "center",
-                      width: "100%",
+                      maxWidth: "60%",
                     }}
                   />
                   <p
                     style={{
                       alignSelf: "center",
                       marginBottom: "0",
+                      color: "white",
+                      fontSize: ".96rem",
+                      fontFamily: "Georgia",
+                      paddingLeft: "5px",
+                    }}
+                    onChange={() => {
+                      console.log("alksjd");
+                      setPlayingTrackIndex(player.trackIndex);
                     }}
                   >
                     {player.trackProgressText.substring(1)}/

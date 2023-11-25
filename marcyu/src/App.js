@@ -8,6 +8,8 @@ import MarcFooter from "./components/Footer";
 import RandomList from "./components/RandomList";
 
 function App() {
+  const [width, height] = [window.screen.width, window.screen.height];
+  const isMobile = Math.min(width, height) < 768;
   const time = new Date();
   time.setSeconds(time.getSeconds() + 0.5);
   let primary = ["Film", "TV", "Video Game", "Animation"];
@@ -58,7 +60,12 @@ function App() {
           }}
           className="subhead"
         >
-          <Row>
+          <Row
+            style={{
+              transform: "translateX(-7px)",
+              display: isMobile ? "none" : "",
+            }}
+          >
             <Col style={{ textAlign: "right" }}>
               <RandomList
                 primary={primary}
@@ -66,11 +73,10 @@ function App() {
                 removeItemPrimary={removeItemPrimary}
                 removeItemSecondary={removeItemSecondary}
                 time={time}
-                // style={{ height: "fit-content", overflow: "hidden  " }}
               />
             </Col>
-            <Col>
-              <span style={{ textAlign: "left", color: "gray" }}>
+            <Col style={{ paddingLeft: "0" }}>
+              <span style={{ textAlign: "left", color: "#c0c0c0" }}>
                 <i>
                   {"| "}
                   COMPOSER
@@ -81,11 +87,8 @@ function App() {
         </div>
         <Container>
           <Row>
-            <Col>
-              <img
-                style={{ width: "50vw", paddingRight: "5%" }}
-                src={require("./marc_yu.jpeg")}
-              />
+            <Col style={{display: isMobile ? "none" : ""}}>
+              <img style={{ width: "100%" }} src={require("./marc_yu.jpeg")} />
             </Col>
             <Col>
               <div className="textbox">
@@ -115,6 +118,7 @@ function App() {
                   bring visual media to life.
                 </p>
               </div>
+              <img style={{ width: "100%", display: isMobile ? "" : "none" }} src={require("./marc_yu.jpeg")} />
             </Col>
           </Row>
           <div style={{ paddingTop: "5%" }}></div>

@@ -7,9 +7,9 @@ import MarcFooter from "../components/Footer";
 import shp from "../assets/shp.jpeg";
 import "react-h5-audio-player/lib/styles.css";
 import tochter from "../assets/shp/SHP-T01v1 M01v3 Tokhter's Visit.wav";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import NewAudioPlayer from "../components/AudioPlayer";
-import applemusic from "../assets/Apple Music_Icon_2020/AppleMusic_Icon_BlackandWhite/SVG/Small/Apple_Music_Icon_wht_sm_073120.svg"
+import applemusic from "../assets/Apple Music_Icon_2020/AppleMusic_Icon_BlackandWhite/SVG/Small/Apple_Music_Icon_wht_sm_073120.svg";
 
 function Shpilke() {
   const trackInfo = [
@@ -79,6 +79,12 @@ function Shpilke() {
     setHoveredItem({ title: "", track: tochter, index: "", length: "" });
   };
 
+  const [playingTrackIndex, setPlayingTrackIndex] = useState(0)
+
+  useEffect(() => {
+    setSelectedTrack(trackInfo[playingTrackIndex])
+  }, [playingTrackIndex])
+
   return (
     <>
       <div style={{ width: "100vw", background: "black" }}>
@@ -122,6 +128,8 @@ function Shpilke() {
                       trackName={selectedTrack.title}
                       songs={audioTracks}
                       trackInfo={trackInfo}
+                      playingTrackIndex={playingTrackIndex}
+                      setPlayingTrackIndex={setPlayingTrackIndex}
                     />
                     <br />
                     {trackInfo.map((track, index) => {
@@ -130,11 +138,15 @@ function Shpilke() {
                           style={{
                             color: "white",
                             marginBottom: "0",
-                            fontSize: "1.1rem",
+                            padding: "4px",
+                            fontSize: "1rem",
                             marginLeft: "1.1%",
+                            fontFamily: "Georgia",
+                            fontWeight:
+                              hoveredItem.index === track.index ? "bold" : "",
                             backgroundColor:
-                              hoveredItem.index === track.index
-                                ? "gray"
+                              selectedTrack.index === track.index
+                                ? "#313131"
                                 : "black",
                             borderRadius: "6px",
                           }}
@@ -150,14 +162,15 @@ function Shpilke() {
                     })}
                     <div
                       style={{
-                        paddingInline: "10%",
+                        paddingInline: "15%",
                         display: "flex",
                         width: "100%",
                         justifyContent: "space-between",
+                        paddingTop: "2%",
                       }}
                     >
                       <a href="https://twitter.com/MarcYuMusic">
-                        <img style={{width: "24px"}} src={applemusic}/>
+                        <img style={{ width: "24px" }} src={applemusic} />
                       </a>
                       <a href="https://www.youtube.com/watch?v=RBrmbq407oM&list=PLWLXJaKFBj4IzMm22ilhuJE1ERE29RBq7">
                         <svg
@@ -172,7 +185,7 @@ function Shpilke() {
                         </svg>
                       </a>
                       <a href="https://twitter.com/MarcYuMusic">
-                      <svg
+                        <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width="24"
                           height="24"
@@ -228,21 +241,6 @@ function Shpilke() {
                   </Col>
                   <Col style={{ paddingRight: "18%", paddingLeft: "2%" }}>
                     <div style={{ color: "white", fontFamily: "Georgia" }}>
-                      <h3>SUMMARY</h3>
-                      <p style={{ fontSize: "1.1rem", color: "#B9BAB9" }}>
-                        Eva, an anxiety ridden teenager, must sit through a
-                        family dinner as a panic attack consumes her. On the
-                        precipice of her graduation from high school she is
-                        gathered with her brother, cousins, father and
-                        grandmother while trying to work through the torment in
-                        her mind. Her strenuous relationship with her father
-                        pushes her to madness as she tries to fight through the
-                        issue at hand. This leads to a tumultuous fight with her
-                        younger brother. <br />
-                        <br />
-                        Directed by Morgan Berg; Edited by Madison Chute
-                      </p>
-                      <div style={{ paddingBottom: "5%" }}></div>
                       <h3>CREDITS</h3>
                       <ul
                         style={{
@@ -282,6 +280,21 @@ function Shpilke() {
                           </span>{" "}
                         </li>
                       </ul>
+                      <div style={{ paddingBottom: "5%" }}></div>
+                      <h3>SUMMARY</h3>
+                      <p style={{ fontSize: "1.1rem", color: "#B9BAB9" }}>
+                        Eva, an anxiety ridden teenager, must sit through a
+                        family dinner as a panic attack consumes her. On the
+                        precipice of her graduation from high school she is
+                        gathered with her brother, cousins, father and
+                        grandmother while trying to work through the torment in
+                        her mind. Her strenuous relationship with her father
+                        pushes her to madness as she tries to fight through the
+                        issue at hand. This leads to a tumultuous fight with her
+                        younger brother. <br />
+                        <br />
+                        Directed by Morgan Berg; Edited by Madison Chute
+                      </p>
                     </div>
                   </Col>
                 </Row>

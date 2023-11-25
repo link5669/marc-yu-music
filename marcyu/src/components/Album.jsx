@@ -11,14 +11,14 @@ const Album = (props) => {
           to="/music/shpilkes"
         >
           <img
-            style={{ width: "100%", paddingBottom: "10%" }}
+            style={{ width: "100%", paddingBottom: "5%" }}
             alt="album cover"
             src={props.img}
           />
         </Link>
       ) : (
         <img
-          style={{ width: "100%", paddingBottom: "10%" }}
+          style={{ width: "100%", paddingBottom: "5%" }}
           alt="album cover"
           src={props.img}
         />

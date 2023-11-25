@@ -36,7 +36,7 @@ const RandomList = (props) => {
       setWords([nextWord, ...words])
       setCurrWord(nextWord);
       const time = new Date();
-      time.setSeconds(time.getSeconds() + 3);
+      time.setSeconds(time.getSeconds() + 5);
       restartSecond(time);
     },
   });
@@ -54,7 +54,7 @@ const RandomList = (props) => {
 
   return (
     <>
-      <span style={{ color: "grey" }}>
+      <span style={{ color: "#c0c0c0" }}>
         <i>
           {isRunning ? (
             <div style={{ float: "right", display: "flex" }}>

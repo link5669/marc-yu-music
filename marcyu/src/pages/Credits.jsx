@@ -132,9 +132,6 @@ function Credits() {
                     from="TV Series | Composer Assistant"
                   />
                   <br />
-                  <Credit title="String" from="Video Game | Director" />
-                  <Credit title="Alistair" from="Video Game | Composer" />
-                  <Credit title="Potion Pushas" from="Video Game | Composer" />
                   <Credit
                     title="Jade Island Simulator"
                     from="Video Game | Audio Director"
@@ -143,6 +140,9 @@ function Credits() {
                     title="Space Shark"
                     from="Video Game | Audio Director"
                   />
+                  <Credit title="String" from="Video Game | Director" />
+                  <Credit title="Alistair" from="Video Game | Composer" />
+                  <Credit title="Potion Pushas" from="Video Game | Composer" />
                   <Credit
                     title="Esception"
                     from="Video Game | Sound Designer"

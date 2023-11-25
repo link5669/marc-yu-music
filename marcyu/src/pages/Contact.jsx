@@ -53,9 +53,7 @@ function Contact() {
               <Row>
                 <Col style={{ padding: "0px" }}>
                   <label htmlFor="first-name" >
-                    Name <span style={{ color: "gray" }}>(required)</span>
-                    <br />
-                    First Name
+                    First Name <span style={{ color: "gray" }}>(required)</span>
                   </label>
 
                   <input
@@ -70,7 +68,6 @@ function Contact() {
                 </Col>
                 <Col style={{ padding: "0px", paddingLeft: "15px" }}>
                   <label htmlFor="last-name">
-                    <br />
                     Last Name
                   </label>
 
