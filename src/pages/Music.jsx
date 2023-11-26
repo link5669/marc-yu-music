@@ -31,7 +31,7 @@ function Music() {
             >
               <i>
                 Interested in music for your project?{" "}
-                <Link style={{ color: "grey" }} to="/contact">
+                <Link style={{ color: "grey" }} to="/marc-yu-music/contact">
                   Send a message
                 </Link>{" "}
                 to request a custom demo reel!

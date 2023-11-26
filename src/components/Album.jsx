@@ -8,7 +8,7 @@ const Album = (props) => {
       {props.title == "Shpilkes Preview" ? (
         <Link
           style={{ textDecoration: "none", color: "gray" }}
-          to="/music/shpilkes"
+          to="/marc-yu-music/music/shpilkes"
         >
           <img
             style={{ width: "100%", paddingBottom: "5%" }}
@@ -45,7 +45,7 @@ const Album = (props) => {
             <div>
               <Link
                 style={{ textDecoration: "none", color: "gray" }}
-                to="/music/shpilkes"
+                to="/marc-yu-music/music/shpilkes"
               >
                 Learn more...
               </Link>

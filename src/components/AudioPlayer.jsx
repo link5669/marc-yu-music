@@ -107,11 +107,11 @@ const NewAudioPlayer = ({
                     onMouseUp={(e) => player.onScrubEnd(e)}
                     onKeyUp={(e) => player.onScrubEnd(e)}
                     style={{
-                      background: `linear-gradient(to right, gray 0%, gray ${
+                      background: `linear-gradient(to right, #DEE2E6 0%, #DEE2E6 ${
                         (player.trackProgress / player.duration) * 100
-                      }%, #DEE2E6 ${
+                      }%, gray ${
                         (player.trackProgress / player.duration) * 100
-                      }%, #DEE2E6 100%)`,
+                      }%, gray 100%)`,
                       alignSelf: "center",
                       maxWidth: "60%",
                     }}

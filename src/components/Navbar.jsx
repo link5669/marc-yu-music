@@ -45,7 +45,7 @@ const MarcNavbar = () => {
                   color: "white",
                   textDecoration: "none",
                 }}
-                to="/"
+                to="/marc-yu-music/"
               >
                 <p className={currentPage === "/" ? "underline" : ""}>Home</p>
               </Link>
@@ -57,7 +57,7 @@ const MarcNavbar = () => {
                   color: "white",
                   textDecoration: "none",
                 }}
-                to="/about"
+                to="/marc-yu-music/about"
               >
                 <p className={currentPage === "/about" ? "underline" : ""}>
                   About
@@ -71,7 +71,7 @@ const MarcNavbar = () => {
                   color: "white",
                   textDecoration: "none",
                 }}
-                to="/music"
+                to="/marc-yu-music/music"
               >
                 <p className={currentPage === "/music" ? "underline" : ""}>
                   Music
@@ -85,7 +85,7 @@ const MarcNavbar = () => {
                   color: "white",
                   textDecoration: "none",
                 }}
-                to="/credits"
+                to="/marc-yu-music/credits"
               >
                 <p className={currentPage === "/credits" ? "underline" : ""}>
                   Credits & Awards
@@ -99,7 +99,7 @@ const MarcNavbar = () => {
                   color: "white",
                   textDecoration: "none",
                 }}
-                to="/contact"
+                to="/marc-yu-music/contact"
               >
                 <p className={currentPage === "/contact" ? "underline" : ""}>
                   Contact

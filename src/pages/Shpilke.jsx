@@ -174,7 +174,7 @@ function Shpilke() {
                         paddingTop: "2%",
                       }}
                     >
-                      <a
+                      <a target="_blank"
                         onMouseOver={() => setAppleMouseOver(true)}
                         onMouseOut={() => setAppleMouseOver(false)}
                         href="https://music.apple.com/us/album/shpilkes-original-soundtrack-ep/1711634550"
@@ -188,7 +188,7 @@ function Shpilke() {
                           />
                         )}
                       </a>
-                      <a
+                      <a target="_blank"
                         onMouseOver={() => setYouTubeMouseOver(true)}
                         onMouseOut={() => setYouTubeMouseOver(false)}
                         href="https://www.youtube.com/watch?v=RBrmbq407oM&list=PLWLXJaKFBj4IzMm22ilhuJE1ERE29RBq7"
@@ -216,7 +216,7 @@ function Shpilke() {
                           </svg>
                         )}
                       </a>
-                      <a
+                      <a target="_blank"
                         onMouseOver={() => setSoundcloudMouseOver(true)}
                         onMouseOut={() => setSoundcloudMouseOver(false)}
                         href="https://soundcloud.com/marcyumusic/sets/shpilkes-original-soundtrack"
@@ -302,7 +302,7 @@ function Shpilke() {
                           </svg>
                         )}
                       </a>
-                      <a
+                      <a target="_blank"
                         onMouseOver={() => setSpotifyMouseOver(true)}
                         onMouseOut={() => setSpotifyMouseOver(false)}
                         href="https://open.spotify.com/album/5ewK2hWeZKTHqhQANfK2pH?si=b80mab2QQye5Js6Zlq3Rmw"

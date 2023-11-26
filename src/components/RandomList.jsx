@@ -71,12 +71,12 @@ const RandomList = (props) => {
             style={{ textAlign: "right", padding: 0, margin: 0 }}
           >
             {words.map((word, index) => (
-              <span key={index}>{word.toUpperCase()}</span>
+              <span style={{color: "#c0c0c0" }}key={index}>{word.toUpperCase()}</span>
             ))}
           </TextLoop>
         </div>
         ) : (
-          <span>{currWord.toUpperCase()} </span>
+          <span style={{color: "#c0c0c0" }}>{currWord.toUpperCase()} </span>
         )}
       </i>
     </>

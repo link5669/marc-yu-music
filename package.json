@@ -2,7 +2,7 @@
   "name": "marcyu",
   "homepage": "https://link5669.github.io/marc-yu-music/",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@emailjs/browser": "^3.11.0",
     "@testing-library/jest-dom": "^5.17.0",
